@@ -55,16 +55,43 @@
     myImage.setAttribute('src', 'static/coffee_beans.jpg');
 
 
-    // var makeCoffee = function(evt) {
-    //     myImage.setAttribute('src', 'static/coffee_mug.jpg');
-    //     console.log(evt)
-    // }
+    var makeCoffee = function(evt) {
+        myImage.setAttribute('src', 'static/coffee_machine.jpg');
+        setTimeout(coffeCup, 1500)
+        console.log(evt);
+    }
+
+    myImage.addEventListener('click', makeCoffee)
+
+    var coffeCup = function(evt) {
+        myImage.setAttribute('src', 'static/coffee_mug.jpg');
+        setTimeout(backToBeans, 2500);
+        console.log(evt);
+
+    }
+
+    var backToBeans = function(evt) {
+        myImage.setAttribute('src', 'static/coffee_beans.jpg');
+        console.log(evt);
+    }
+
+
+
 
     // myImage.addEventListener('click', makeCoffee);
-    myImage.addEventListener('click', function(evt) {
-        myImage.setAttribute('src', 'static/coffee_mug.jpg');
-        console.log(evt);
-    });
+
+    // FUNCTION{
+    //     sets coffee_mug
+    //     setTimeout()
+
+    // }
+
+    // myImage.addEventListener('click', function(evt) {
+    //     myImage.setAttribute('src', 'static/coffee_machine.jpg');
+    //     setTimeout(FUNCTION, 1500)
+    //     console.log(evt);
+    // });
+
 
 
 
